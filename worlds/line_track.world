@@ -1,0 +1,881 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="line_track">
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"></plugin>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>10 10</size></plane>
+          </geometry>
+          <surface>
+            <friction><ode><mu>100</mu><mu2>50</mu2></ode></friction>
+          </surface>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane><normal>0 0 1</normal><size>10 10</size></plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+        <model name="line_seg_0">
+      <static>true</static>
+      <link name="link">
+        <pose>0.5000 0.1683 0.0010 0 0 0.9946</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_1">
+      <static>true</static>
+      <link name="link">
+        <pose>0.5591 0.2522 0.0010 0 0 0.9116</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_2">
+      <static>true</static>
+      <link name="link">
+        <pose>0.6276 0.3286 0.0010 0 0 0.7535</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_3">
+      <static>true</static>
+      <link name="link">
+        <pose>0.7108 0.3882 0.0010 0 0 0.4655</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_4">
+      <static>true</static>
+      <link name="link">
+        <pose>0.8094 0.4139 0.0010 0 0 0.0362</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_5">
+      <static>true</static>
+      <link name="link">
+        <pose>0.9107 0.4001 0.0010 0 0 -0.2739</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_6">
+      <static>true</static>
+      <link name="link">
+        <pose>1.0074 0.3656 0.0010 0 0 -0.3814</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_7">
+      <static>true</static>
+      <link name="link">
+        <pose>1.1032 0.3287 0.0010 0 0 -0.3302</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_8">
+      <static>true</static>
+      <link name="link">
+        <pose>1.2027 0.3038 0.0010 0 0 -0.1398</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_9">
+      <static>true</static>
+      <link name="link">
+        <pose>1.3051 0.3030 0.0010 0 0 0.1300</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_10">
+      <static>true</static>
+      <link name="link">
+        <pose>1.4047 0.3271 0.0010 0 0 0.3328</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_11">
+      <static>true</static>
+      <link name="link">
+        <pose>1.5001 0.3651 0.0010 0 0 0.4045</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_12">
+      <static>true</static>
+      <link name="link">
+        <pose>1.5954 0.4033 0.0010 0 0 0.3298</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_13">
+      <static>true</static>
+      <link name="link">
+        <pose>1.6955 0.4248 0.0010 0 0 0.0566</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_14">
+      <static>true</static>
+      <link name="link">
+        <pose>1.7961 0.4087 0.0010 0 0 -0.3732</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_15">
+      <static>true</static>
+      <link name="link">
+        <pose>1.8829 0.3547 0.0010 0 0 -0.7079</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_16">
+      <static>true</static>
+      <link name="link">
+        <pose>1.9540 0.2807 0.0010 0 0 -0.8888</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_17">
+      <static>true</static>
+      <link name="link">
+        <pose>2.0145 0.1979 0.0010 0 0 -0.9854</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_18">
+      <static>true</static>
+      <link name="link">
+        <pose>2.0687 0.1106 0.0010 0 0 -1.0400</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_19">
+      <static>true</static>
+      <link name="link">
+        <pose>2.1190 0.0211 0.0010 0 0 -1.0737</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_20">
+      <static>true</static>
+      <link name="link">
+        <pose>2.1672 -0.0696 0.0010 0 0 -1.0895</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_21">
+      <static>true</static>
+      <link name="link">
+        <pose>2.2145 -0.1607 0.0010 0 0 -1.0920</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_22">
+      <static>true</static>
+      <link name="link">
+        <pose>2.2622 -0.2517 0.0010 0 0 -1.0810</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_23">
+      <static>true</static>
+      <link name="link">
+        <pose>2.3115 -0.3418 0.0010 0 0 -1.0550</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_24">
+      <static>true</static>
+      <link name="link">
+        <pose>2.3641 -0.4300 0.0010 0 0 -1.0061</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_25">
+      <static>true</static>
+      <link name="link">
+        <pose>2.4226 -0.5144 0.0010 0 0 -0.9122</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_26">
+      <static>true</static>
+      <link name="link">
+        <pose>2.4914 -0.5904 0.0010 0 0 -0.7313</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_27">
+      <static>true</static>
+      <link name="link">
+        <pose>2.5779 -0.6444 0.0010 0 0 -0.3218</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_28">
+      <static>true</static>
+      <link name="link">
+        <pose>2.6789 -0.6462 0.0010 0 0 0.2947</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_29">
+      <static>true</static>
+      <link name="link">
+        <pose>2.7687 -0.5976 0.0010 0 0 0.6515</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_30">
+      <static>true</static>
+      <link name="link">
+        <pose>2.8445 -0.5285 0.0010 0 0 0.8046</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_31">
+      <static>true</static>
+      <link name="link">
+        <pose>2.9130 -0.4520 0.0010 0 0 0.8656</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_32">
+      <static>true</static>
+      <link name="link">
+        <pose>2.9788 -0.3732 0.0010 0 0 0.8768</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_33">
+      <static>true</static>
+      <link name="link">
+        <pose>3.0454 -0.2949 0.0010 0 0 0.8491</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_34">
+      <static>true</static>
+      <link name="link">
+        <pose>3.1157 -0.2201 0.0010 0 0 0.7740</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_35">
+      <static>true</static>
+      <link name="link">
+        <pose>3.1933 -0.1529 0.0010 0 0 0.6416</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_36">
+      <static>true</static>
+      <link name="link">
+        <pose>3.2812 -0.1002 0.0010 0 0 0.4289</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_37">
+      <static>true</static>
+      <link name="link">
+        <pose>3.3789 -0.0695 0.0010 0 0 0.1808</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_38">
+      <static>true</static>
+      <link name="link">
+        <pose>3.4810 -0.0591 0.0010 0 0 0.0455</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_39">
+      <static>true</static>
+      <link name="link">
+        <pose>3.5835 -0.0537 0.0010 0 0 0.0946</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_40">
+      <static>true</static>
+      <link name="link">
+        <pose>3.6842 -0.0345 0.0010 0 0 0.3090</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_41">
+      <static>true</static>
+      <link name="link">
+        <pose>3.7770 0.0089 0.0010 0 0 0.5624</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_42">
+      <static>true</static>
+      <link name="link">
+        <pose>3.8579 0.0719 0.0010 0 0 0.7470</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_43">
+      <static>true</static>
+      <link name="link">
+        <pose>3.9287 0.1462 0.0010 0 0 0.8617</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_44">
+      <static>true</static>
+      <link name="link">
+        <pose>3.9929 0.2264 0.0010 0 0 0.9242</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_45">
+      <static>true</static>
+      <link name="link">
+        <pose>4.0534 0.3093 0.0010 0 0 0.9529</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_46">
+      <static>true</static>
+      <link name="link">
+        <pose>4.1126 0.3932 0.0010 0 0 0.9538</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_47">
+      <static>true</static>
+      <link name="link">
+        <pose>4.1730 0.4763 0.0010 0 0 0.9244</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_48">
+      <static>true</static>
+      <link name="link">
+        <pose>4.2374 0.5562 0.0010 0 0 0.8501</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_49">
+      <static>true</static>
+      <link name="link">
+        <pose>4.3104 0.6283 0.0010 0 0 0.6863</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_50">
+      <static>true</static>
+      <link name="link">
+        <pose>4.3992 0.6786 0.0010 0 0 0.2909</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="line_seg_51">
+      <static>true</static>
+      <link name="link">
+        <pose>4.5000 0.6752 0.0010 0 0 0.0000</pose>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.16 0.08 0.002</size></box>
+          </geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>
